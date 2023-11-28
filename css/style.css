@@ -34,9 +34,13 @@
 
     Accents:
 
+
     Greys:
     #555
     #333
+
+    Contrast Checker:
+    https://coolors.co/
 
 --- 03 IMAGES:
         unsplash.com
@@ -73,7 +77,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -113,6 +117,7 @@ body {
   display: inline-block;
   padding: 1.6rem 3.2rem;
   font-size: 2rem;
+  font-weight: 600;
   text-decoration: none;
   border-radius: 9px;
   /* Transition is added on the original state */
@@ -149,11 +154,44 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 8rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  border-radius: 50%;
+  height: 4.8rem;
+  width: 4.8rem;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+  margin-right: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
 .hero-img {
   width: 100%;
 }
 
 /* Helper Classes */
 .margin-right-sm {
-  margin-right: 1.6rem;
+  margin-right: 1.6rem !important;
 }
