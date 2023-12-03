@@ -1,0 +1,217 @@
+/* 
+
+--- 01 TYPOGRAPHY SYSTEMS
+
+    - FONT WEIGHTS
+    Default: 400
+    Medium: 500
+    Semi-Bold: 600
+    Bold: 700
+
+
+    - LINE HEIGHTS
+    Default: 1
+    Small: 1.05
+    Medium: 1.2
+    Paragraph default: 1.6
+
+    - LETTER SPACING
+    -0.5px
+    0.75px
+
+    - FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+--- 02 COLORS
+
+    Primary: 
+    #e67e22
+
+    Tints:
+    https://maketintsandshades.com/ 
+
+    #fdf2e9
+    #fae5d3
+
+    0%	10%	20%	30%	40%	50%	60%	70%	80%	90%	100%
+    #e67e22	#cf711f	#b8651b	#a15818	#8a4c14	#5c320e	#45260a	#2e1907	#170d03	#000000
+
+    Shades:
+    https://maketintsandshades.com/
+
+    #e67e22	#e98b38	#eb984e	#eea564	#f0b27a	#f3bf91	#f5cba7	#f8d8bd	#fae5d3	#fdf2e9	#ffffff
+
+
+    Accents:
+
+    Greys:
+    #555
+    #333
+
+    Contrast Checker:
+    https://coolors.co/
+
+--- 03 IMAGES:
+    unsplash.com
+    
+    Customers: uifaces.com
+
+--- 05 SHADOWS:
+
+
+--- 06 BORDER RADIUS
+
+    DEFAULT: 9px
+
+
+--- 07 WHITESPACE
+    - SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+
+
+
+*/
+/****************************************************/
+/* START                                            */
+/****************************************************/
+
+html {
+  /* 1rem == 16px by default */
+  /* font-size: 10px; */
+  /* By percentage = 10px/16px = 0.625 = 62.5%*/
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+/****************************************************/
+/* GENERAL RESUABLE COMPONENTS                      */
+/****************************************************/
+
+.container {
+  /* 1140 */
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  /* gap: 9.6rem; */
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-center-v {
+  align-items: center;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  color: #cf711f;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  /* Transition is added on the original state */
+  /* transition: all 0.3s; */
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+
+  /* Can't do this becuase it jumps */
+  /* border: solid 3px #fff; */
+
+  /* Use a trick to apply border inside */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+  /* inset x-offset y-offset blur size color */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+/* Helper Classes */
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
