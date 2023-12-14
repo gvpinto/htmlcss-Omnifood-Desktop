@@ -34,6 +34,8 @@
 
     #fdf2e9
     #fae5d3
+    #eb984e
+    #45260a
 
     0%	10%	20%	30%	40%	50%	60%	70%	80%	90%	100%
     #e67e22	#cf711f	#b8651b	#a15818	#8a4c14	#5c320e	#45260a	#2e1907	#170d03	#000000
@@ -92,6 +94,13 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(232, 127, 36, 0.5);
 }
 
 body {
@@ -182,6 +191,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -190,9 +200,15 @@ body {
   text-decoration: none;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
   /* Transition is added on the original state */
   transition: all 0.3s;
   /* transition: background-color 0.3s; */
+
+  /* Needed for just .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn--full:link,
@@ -222,6 +238,19 @@ body {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
   /* inset x-offset y-offset blur size color */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  /* Part of a Grid */
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
