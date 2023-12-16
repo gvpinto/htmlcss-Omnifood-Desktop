@@ -49,9 +49,12 @@
     Accents:
 
     Greys:
+    #888
+    #777
     #6F6F6F lightest grey allowed on #fdf2e9
     #555
     #333
+    #767676
 
     Contrast Checker:
     https://coolors.co/
@@ -149,6 +152,10 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid-center-v {
