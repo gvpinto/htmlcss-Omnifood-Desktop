@@ -71,6 +71,10 @@
   /* background-color: bisque; */
 }
 
+.hero-img {
+  width: 100%;
+}
+
 .hero-description {
   font-size: 20px;
   line-height: 1.6;
@@ -108,10 +112,6 @@
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
-}
-
-.hero-img {
-  width: 100%;
 }
 
 /****************************************************/
@@ -492,6 +492,7 @@
 
 .cta {
   display: grid;
+  /* 2/3 - 66.6% 33.3% */
   grid-template-columns: 2fr 1fr;
   /* temp */
   /* background-color: #e67e22; */
